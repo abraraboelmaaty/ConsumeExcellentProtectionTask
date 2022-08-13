@@ -1,0 +1,29 @@
+<div class="my-5 container" *ngIf="orders">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quntity</th>
+        <th scope="col">Totale Price</th>
+        <th scope="col">Paid</th>
+        <th scope="col">Rest</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <th scope="row">{{order.id}}</th>
+        <td>{{order.item}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.quantity}}</td>
+        <td>{{order.totalPrice}}</td>
+        <td>{{order.paid}}</td>
+        <td>{{order.rest}}</td>
+        <td>{{order.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

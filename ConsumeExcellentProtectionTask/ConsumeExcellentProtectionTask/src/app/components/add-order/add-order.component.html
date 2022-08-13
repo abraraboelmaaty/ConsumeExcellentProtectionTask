@@ -1,0 +1,26 @@
+<form class="container mt-5 addOrderform" #addOrder = "ngForm" (ngSubmit)="onSubmit()">
+  <h4>Add new Order:</h4>
+  <div class="alert alert-success" *ngIf="this.alertflag">
+    Order Added
+    <button type = "button" class="close" data-dismiss="alert" (click)="close()">&times;</button>
+  </div>
+
+  <div class="form-group">
+    <label for="Item">Item:</label>
+    <input type="text" name="inputItem" class="form-control" id="Item" placeholder="Enter Order Item" #addItem="ngModel" [(ngModel)]="order.item">
+  </div>
+  <div class="form-group">
+    <label for="Price">Price:</label>
+    <input type="text" name="inputPrice" class="form-control" id="Price" placeholder="Enter Item Price"  #addPrice="ngModel" [(ngModel)]="order.price">
+  </div>
+
+ <div class="form-group">
+    <label for="Quantity">Quantity:</label>
+    <input type="number" name="inputQuantity" class="form-control" id="Quantity" placeholder="Enter Item Quantity" #addQuantity="ngModel" [(ngModel)]="order.quantity">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary submitbtn">Add</button>
+</form>
+
+
